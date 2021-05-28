@@ -35,15 +35,15 @@ async function sendMail(user, callback) {
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'lorena.acosta95@gmail.com',
-            pass: 'wmkaglykolfnhvjf'
+            user: 'kathyspa.com.py@gmail.com',
+            pass: 'tnwwwrepbeqeozdt'
         }
     });
 
     let mailOptions = {
         from: '"Correo de Lorena"<lorena.acosta95@gmail.com>', // sender address
         to: user.email, // list of receivers
-        subject: "Reserva COnfirmada 👻", // Subject line
+        subject: "Reserva Confirmada ", // Subject line
         html: `<h1>Te esperamos ${user.name}</h1><br>
     <h4>This is great!</h4>`
     };
