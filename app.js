@@ -35,17 +35,19 @@ async function sendMail(user, callback) {
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'kathyspa.com.py@gmail.com',
-            pass: 'tnwwwrepbeqeozdt'
+            user: 'lorena.acosta95@gmail.com',
+            pass: 'wmkaglykolfnhvjf'
         }
     });
-
+    /**
+     * `<h1>Te esperamos ${user.name}</h1><br>
+        <h4>This is great!</h4>`
+     */
     let mailOptions = {
-        from: '"Kathy Spa"<kathyspa.com.py@gmail.com>', // sender address
+        from: '"Correo de Lorena"<lorena.acosta95@gmail.com>', // sender address
         to: user.email, // list of receivers
-        subject: "Reserva Confirmada ", // Subject line
-        html: `<h1>Te esperamos ${user.name}</h1><br>
-    <h4>San Lorenzo Paraguay</h4>`
+        subject: user.subject, // Subject line
+        html: user.html
     };
 
     // send mail with defined transport object
