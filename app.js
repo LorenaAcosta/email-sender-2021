@@ -39,15 +39,13 @@ async function sendMail(user, callback) {
             pass: 'wmkaglykolfnhvjf'
         }
     });
-    /**
-     * `<h1>Te esperamos ${user.name}</h1><br>
-        <h4>This is great!</h4>`
-     */
+
     let mailOptions = {
         from: '"Correo de Lorena"<lorena.acosta95@gmail.com>', // sender address
         to: user.email, // list of receivers
         subject: user.subject, // Subject line
-        html: user.html
+        html: `<h1>Te esperamos ${user.name}</h1><br>
+    <h4>This is great!</h4>`
     };
 
     // send mail with defined transport object
