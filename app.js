@@ -44,8 +44,7 @@ async function sendMail(user, callback) {
         from: '"Kathy Spa"<kathyspa.com.py@gmail.com>', // sender address
         to: user.email, // list of receivers
         subject: user.subject, // Subject line
-        html: `<h1>Te esperamos ${user.name}</h1><br>
-    <h4>San Lorenzo Paraguay</h4>`
+        html: user.html
     };
 
     // send mail with defined transport object
